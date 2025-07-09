@@ -71,6 +71,30 @@ Evaluation Metrics:
 
 ---
 
+### 📊 Model Performance Comparison
+
+The following table summarizes the performance of all 14 models evaluated on the validation set, using **R² Score**, **Root Mean Squared Error (RMSE)**, and **Mean Absolute Error (MAE)**:
+
+| Model                     | R² Score | RMSE | MAE  | Tuned? |
+|---------------------------|----------|------|------|--------|
+| Random Forest (Tuned)     | 0.9699   | 3920 | 2154 | ✅ Yes |
+| Random Forest             | 0.9692   | 3963 | 2151 | ❌ No  |
+| XGBoost (Tuned)           | 0.9692   | 3965 | 2293 | ✅ Yes |
+| XGBoost                   | 0.9670   | 4105 | 2417 | ❌ No  |
+| LightGBM (Tuned)          | 0.9667   | 4125 | 2442 | ✅ Yes |
+| LightGBM                  | 0.9648   | 4236 | 2507 | ❌ No  |
+| Gradient Boosting (Tuned) | 0.9634   | 4325 | 2569 | ✅ Yes |
+| Decision Tree (Tuned)     | 0.9606   | 4485 | 2504 | ✅ Yes |
+| Gradient Boosting         | 0.9483   | 5135 | 3090 | ❌ No  |
+| Decision Tree             | 0.9460   | 5251 | 2482 | ❌ No  |
+| AdaBoost                  | 0.9283   | 6051 | 3757 | ❌ No  |
+| Linear Regression         | 0.9110   | 6740 | 4566 | ❌ No  |
+| Ridge Regression          | 0.9110   | 6740 | 4566 | ❌ No  |
+| Lasso Regression          | 0.9110   | 6741 | 4565 | ❌ No  |
+
+📌 **Observation**:  
+Tree-based ensemble models, especially after hyperparameter tuning (e.g., Random Forest, XGBoost, LightGBM), deliver superior performance compared to linear models. The tuned Random Forest model consistently outperforms others across all evaluation metrics and was selected for final predictions.
+
 ## 🏆 Best Model
 
 | Metric        | Tuned Random Forest |
